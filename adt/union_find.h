@@ -33,14 +33,14 @@ public:
 
     void unite(const int x, const int y)
     {
-        auto px = _parent[x];
-        auto py = _parent[y];
+        auto px = find(x);
+        auto py = find(y);
 
         if (px != py) {
             if (_rank[px] < _rank[py]) {
-                _parent[x] = py;
+                _parent[px] = py;
             } else {
-                _parent[y] = px;
+                _parent[py] = px;
 
                 if (_rank[px] == _rank[py]) {
                     ++_rank[px];

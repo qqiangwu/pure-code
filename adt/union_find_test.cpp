@@ -50,3 +50,26 @@ TEST(UnionFind, Random)
         }
     }
 }
+
+TEST(UnionFind, MultiUnion)
+{
+    UnionFind uf(8);
+
+    uf.unite(0, 1);
+    uf.unite(2, 3);
+    uf.unite(4, 5);
+    uf.unite(6, 7);
+
+    uf.unite(0, 2);
+    uf.unite(5, 7);
+
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 4; ++j) {
+            ASSERT_EQ(uf.find(i), uf.find(j));
+            ASSERT_EQ(uf.find(4 + i), uf.find(4 + j));
+        }
+
+        ASSERT_NE(uf.find(i), uf.find(4 + i));
+    }
+}
+
