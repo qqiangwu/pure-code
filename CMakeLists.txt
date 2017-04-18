@@ -6,7 +6,7 @@ conan_basic_setup()
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES linear/unguarded_partition.cpp linear/utils.h linear/unguarded_partition.h linear/partition.cpp linear/partition.h linear/find_kth_of_2.h linear/find_kth_of_2_test.cpp linear/find_kth.h linear/find_kth_test.cpp)
+set(SOURCE_FILES linear/unguarded_partition.cpp linear/utils.h linear/unguarded_partition.h linear/partition.cpp linear/partition.h linear/find_kth_of_2.h linear/find_kth_of_2_test.cpp linear/find_kth.h linear/find_kth_test.cpp adt/union_find.h adt/union_find_test.cpp graph/dijkstra_sp.h graph/dijkstra_sp_test.cpp)
 add_executable(pure_code ${SOURCE_FILES})
 target_link_libraries(pure_code ${CONAN_LIBS})
 
