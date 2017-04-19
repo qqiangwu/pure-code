@@ -17,12 +17,12 @@ TEST(DijkstraSP, Line)
             {}
     };
 
-    ASSERT_EQ(dijkstra_sp(graph, 0, 3), 6);
-    ASSERT_EQ(dijkstra_sp(graph, 0, 2), 3);
-    ASSERT_EQ(dijkstra_sp(graph, 0, 1), 1);
-    ASSERT_EQ(dijkstra_sp(graph, 0, 0), 0);
-    ASSERT_EQ(dijkstra_sp(graph, 1, 2), 2);
-    ASSERT_EQ(dijkstra_sp(graph, 1, 3), 5);
+    ASSERT_EQ(dijkstraSp(graph, 0, 3), 6);
+    ASSERT_EQ(dijkstraSp(graph, 0, 2), 3);
+    ASSERT_EQ(dijkstraSp(graph, 0, 1), 1);
+    ASSERT_EQ(dijkstraSp(graph, 0, 0), 0);
+    ASSERT_EQ(dijkstraSp(graph, 1, 2), 2);
+    ASSERT_EQ(dijkstraSp(graph, 1, 3), 5);
 }
 
 TEST(DijkstraSP, Cycle)
@@ -34,7 +34,7 @@ TEST(DijkstraSP, Cycle)
             {}
     };
 
-    ASSERT_EQ(dijkstra_sp(graph, 0, 1), 3);
-    ASSERT_EQ(dijkstra_sp(graph, 0, 2), 1);
-    ASSERT_EQ(dijkstra_sp(graph, 0, 3), 7);
+    ASSERT_EQ(dijkstraSp(graph, 0, 1), 3);
+    ASSERT_EQ(dijkstraSp(graph, 0, 2), 1);
+    ASSERT_EQ(dijkstraSp(graph, 0, 3), 7);
 }

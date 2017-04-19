@@ -28,7 +28,7 @@ struct PointAndSpCmp {
 
 // \pre: s and t is in graph
 template <class AdjacentList>
-int dijkstra_sp(const AdjacentList& graph, const unsigned s, const unsigned t)
+int dijkstraSp(const AdjacentList& graph, const unsigned s, const unsigned t)
 {
     const auto n = graph.size();
 
