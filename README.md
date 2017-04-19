@@ -46,7 +46,7 @@ void quickSort(Iter first, Iter last)
 }
 ```
 
-In the above example, `partition` (implemented in the repo) is guaranteed to return two non-empty ranges if the length of the input range if larger than one such that we are ensured that both the following recursion calls will occur on smaller dimensions.
+In the above example, `partition` (implemented in the repo) is guaranteed to return two non-empty ranges if the length of the input range if larger than one such that we are assured that both the following recursion calls will occur on smaller dimensions.
 
 # Todo
 You're welcomed to contribute to this project by either:
