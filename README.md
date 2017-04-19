@@ -8,9 +8,11 @@ Code example:
 
 ```cpp
 template <class Iter>
-void linearInsert(Iter insertionPos, Iter p)
+void linearInsert(Iter first, Iter last)
 {
-    std::rotate(insertionPos, p, p + 1);
+    auto insertionPoint = std::upper_bound(first, last, *last);
+
+    std::rotate(insertionPoint, last, last + 1);
 }
 
 template <class Iter>
@@ -19,10 +21,7 @@ void insertionSort(Iter first, Iter last)
     // [begin, p) sorted
     // [p, end) to be processed
     for (auto p = first; p != last; ++p) {
-        auto insertionPoint = std::upper_bound(first, p, *p);
-
-        // insert p to [insertionPoint, p)
-        linearInsert(insertionPoint, p);
+        linearInsert(first, p);
     }
 }
 ```
